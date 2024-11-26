@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Inicio de Sesión</h2>
+        <form method="POST">
+            <label>Usuario: <input type="text" name="usuario" required></label><br>
+            <label>Contraseña: <input type="password" name="password" required></label><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+
+        {% if mensaje %}
+        <p>{{ mensaje }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
